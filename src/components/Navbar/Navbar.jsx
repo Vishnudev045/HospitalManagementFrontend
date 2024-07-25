@@ -12,7 +12,7 @@ const Navbar = () => {
   const navigate = useNavigate()
 
   const logout = () => {
-    axios.get('http://localhost:5000/auth/logout')
+    axios.get('https://hospitalmanagementsystem-1aka.onrender.com/auth/logout')
         .then(() => {
             localStorage.removeItem('accessToken');
             setIsAuthenticated(false);

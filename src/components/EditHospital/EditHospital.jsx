@@ -17,7 +17,7 @@ const EditHospital = () => {
   useEffect(() => {
     const fetchHospital = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/v1/hospitals/update/${id}`);
+        const response = await axios.get(`https://hospitalmanagementsystem-1aka.onrender.com/api/v1/hospitals/update/${id}`);
         const hospitalData = response.data;
         setFormData(hospitalData);
       } catch (error) {
@@ -67,7 +67,7 @@ const EditHospital = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/v1/hospitals/update/${id}`, formData)
+      await axios.put(`https://hospitalmanagementsystem-1aka.onrender.com/api/v1/hospitals/update/${id}`, formData)
       .then((res) => {
         console.log(res);
       });

@@ -8,7 +8,7 @@ const MainPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/v1/hospitals/hospitalProfile/${id}`)
+    axios.get(`https://hospitalmanagementsystem-1aka.onrender.com/api/v1/hospitals/hospitalProfile/${id}`)
       .then((response) => {
         setHospital(response.data);
       })

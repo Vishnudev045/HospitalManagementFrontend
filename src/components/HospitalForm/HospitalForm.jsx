@@ -64,7 +64,7 @@ const HospitalForm = () => {
 
     hospitalData.authorId  = user;
 
-    axios.post('http://localhost:5000/api/v1/hospitals/create', hospitalData)
+    axios.post('https://hospitalmanagementsystem-1aka.onrender.com/api/v1/hospitals/create', hospitalData)
       .then((response) => {
         navigate(`/hospitals/profile/${response.data._id}`);
       })

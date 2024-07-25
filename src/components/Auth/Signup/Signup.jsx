@@ -24,7 +24,7 @@ const Signup = () => {
             return;
         }
 
-        axios.post('http://localhost:5000/auth/signup', userData, {
+        axios.post('https://hospitalmanagementsystem-1aka.onrender.com/auth/signup', userData, {
             headers: {
                 'Content-Type': 'application/json'
             }

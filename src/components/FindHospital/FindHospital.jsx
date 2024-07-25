@@ -11,7 +11,7 @@ const FindHospital = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/v1/hospitals?city=${city}`)
+        axios.get(`https://hospitalmanagementsystem-1aka.onrender.com/api/v1/hospitals?city=${city}`)
         .then(res => {
             setHospitals(res.data)
             setCity('')

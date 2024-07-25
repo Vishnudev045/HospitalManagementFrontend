@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
         if (token) {
-            axios.get('http://localhost:5000/auth/verifyToken', {
+            axios.get('https://hospitalmanagementsystem-1aka.onrender.com/auth/verifyToken', {
                 headers: { 'Authorization': `Bearer ${token}` }
             })
             .then(res => {
@@ -37,7 +37,7 @@ const AuthProvider = ({ children }) => {
 
 
     const logout = () => {
-        axios.get('http://localhost:5000/auth/logout')
+        axios.get('https://hospitalmanagementsystem-1aka.onrender.com/auth/logout')
             .then(() => {
                 localStorage.removeItem('accessToken');
                 setIsAuthenticated(false);

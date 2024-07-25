@@ -11,7 +11,7 @@ const HospitalDetails = () => {
 
   useEffect(() => {
     if (user) {
-      axios.get(`http://localhost:5000/api/v1/hospitals/${user}`)
+      axios.get(`https://hospitalmanagementsystem-1aka.onrender.com/api/v1/hospitals/${user}`)
         .then((response) => {
           console.log(response.data);
           setHospitals(response.data);
@@ -25,7 +25,7 @@ const HospitalDetails = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/hospitals/delete/${id}`)
+      await axios.delete(`https://hospitalmanagementsystem-1aka.onrender.com/api/v1/hospitals/delete/${id}`)
         .then((response) => {
           console.log(response);
           setHospitals(hospitals.filter((hospital) => hospital._id !== id));

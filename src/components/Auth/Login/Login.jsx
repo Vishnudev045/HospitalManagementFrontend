@@ -22,7 +22,7 @@ const Login = () => {
             return;
         }
 
-        axios.post('http://localhost:5000/auth/login', loginData, {
+        axios.post('https://hospitalmanagementsystem-1aka.onrender.com/auth/login', loginData, {
             headers: {
                 'Content-Type': 'application/json'
             }
